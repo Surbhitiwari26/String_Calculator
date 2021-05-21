@@ -64,4 +64,9 @@ public class StringCalculatorTest {
 	public void return_Addition_For_String_Contains_Lengthy_Delimiters(){
 		Assert.assertEquals(15, stringcalculator.Add("//[*******]3,;;;;;\n\n4;1//3******#@4"));
 	}
+	
+	@Test
+	public void return_Addition_For_String_Contains_Multiple_Delimiters(){
+		Assert.assertEquals(20, stringcalculator.Add("//[***%****]3,;[@@****];5;;;\n\n4;1//3******#@4"));
+	}
 }
