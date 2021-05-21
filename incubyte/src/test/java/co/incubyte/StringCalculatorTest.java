@@ -18,4 +18,9 @@ public class StringCalculatorTest {
 	public void return_Zero_For_Empty_String() {
 		Assert.assertEquals(0, stringcalculator.Add(""));
 	}
+	
+	@Test
+	public void return_Addition_For_String_Contains_One_Number(){
+		Assert.assertEquals(10, stringcalculator.Add("10"));
+	}
 }
