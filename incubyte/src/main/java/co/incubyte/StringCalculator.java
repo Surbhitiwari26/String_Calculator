@@ -6,9 +6,16 @@ public class StringCalculator {
 		if (numbers.isEmpty()) {
 			return 0;
 		} else {
+			String[] number = numbers.split(",");
+			int j = 0;
 			int num;
-			num = Integer.parseInt(numbers);		
-			return num;
+			for (int i = 0; i < number.length; i++) {
+				if (!number[i].equals("")) {
+					num = Integer.parseInt(number[i]);
+					j = num + j;
+				}
+			}
+			return j;
 		}
 	}
 }
