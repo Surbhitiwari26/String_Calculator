@@ -43,4 +43,15 @@ public class StringCalculatorTest {
 	public void return_Addition_For_String_Contains_Different_Delimiters(){
 		Assert.assertEquals(15, stringcalculator.Add("//3,\n4;1//3#@4"));
 	}
+	
+	@Test 
+	public void throw_Exception_For_String_Contains_Negative_Numbers(){
+		try
+		{
+			stringcalculator.Add("//3,\n-4;1//-3#-2@4");
+		}
+		catch (IllegalArgumentException e) {
+			Assert.assertEquals(e.getMessage(), "Negatives not allowed: -4,-3,-2");
+		}		
+	}
 }
