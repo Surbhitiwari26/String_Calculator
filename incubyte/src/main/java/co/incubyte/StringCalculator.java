@@ -13,14 +13,18 @@ public class StringCalculator {
 			for (int i = 0; i < number.length; i++) {
 				if (!number[i].equals("")) {
 					num = Integer.parseInt(number[i]);
-					if (num >= 0) {
+					if (num >= 0 && num < 1001) {
 						j = num + j;
 					} else {
+							if (num > 1000) {
+							negNum = "";
+						} else {
 							if (negNum.equals("")) {
 								negNum = String.valueOf(num);
 							} else {
 								negNum += ("," + String.valueOf(num));
 							}
+						}
 					}
 				}
 			}
