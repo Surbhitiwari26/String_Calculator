@@ -59,4 +59,9 @@ public class StringCalculatorTest {
 	public void return_Addition_For_Numbers_lessthan_1001(){
 		Assert.assertEquals(21, stringcalculator.Add("8,1001,10,2,1"));
 	}
+	
+	@Test
+	public void return_Addition_For_String_Contains_Lengthy_Delimiters(){
+		Assert.assertEquals(15, stringcalculator.Add("//[*******]3,;;;;;\n\n4;1//3******#@4"));
+	}
 }
