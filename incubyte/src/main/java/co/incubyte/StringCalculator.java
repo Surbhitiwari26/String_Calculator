@@ -6,7 +6,7 @@ public class StringCalculator {
 		if (numbers.isEmpty()) {
 			return 0;
 		} else {
-			String[] number = numbers.split(",|\n");
+			String[] number = numbers.split("//|,|\n|;|#|@");
 			int j = 0;
 			int num;
 			for (int i = 0; i < number.length; i++) {
