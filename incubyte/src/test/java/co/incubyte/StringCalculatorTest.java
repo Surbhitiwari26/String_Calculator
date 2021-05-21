@@ -28,4 +28,9 @@ public class StringCalculatorTest {
 	public void return_Addition_For_String_Contains_Two_Numbers(){
 		Assert.assertEquals(16, stringcalculator.Add("8,8"));
 	}
+	
+	@Test
+	public void return_Addition_For_String_Contains_Multiple_Numbers(){
+		Assert.assertEquals(41, stringcalculator.Add("8,8,4,10,5,6"));
+	}
 }
