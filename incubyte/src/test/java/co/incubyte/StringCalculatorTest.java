@@ -54,4 +54,9 @@ public class StringCalculatorTest {
 			Assert.assertEquals(e.getMessage(), "Negatives not allowed: -4,-3,-2");
 		}		
 	}
+	
+	@Test
+	public void return_Addition_For_Numbers_lessthan_1001(){
+		Assert.assertEquals(21, stringcalculator.Add("8,1001,10,2,1"));
+	}
 }
